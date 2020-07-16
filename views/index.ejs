@@ -1,0 +1,16 @@
+<%- include("./partials/header") %>
+
+<div class="container-sm main-container">
+    <h1>Notes Application</h1>
+    <a href="/addnote" class="btn btn-lg btn-success">Add new note</a>
+    <div class="notes-container">
+        <% notes.forEach(note => { %>
+            <div class="note">
+                <h1><%= note.title %></h1>
+                <p><%= note.body %></p>
+            </div>
+        <% }) %>
+    </div>
+</div>
+
+<%- include("./partials/footer") %>

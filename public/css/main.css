@@ -1,0 +1,79 @@
+:root {
+    --bootstrap-text-color: #212529;
+}
+
+body {
+    background-color: #fcba03;
+    min-height: 100vh;
+    padding: 0;
+}
+
+#newnoteform {
+    width: 100%;
+} #newnoteform label {
+    font-size: 2rem;
+    display: block;
+    margin-left: 25%;
+} #newnoteform input[type="text"] {
+    border: 2px solid var(--bootstrap-text-color);
+    border-radius: 6px;
+    padding: 0.5rem 1rem;
+    width: 50%;
+    margin: 0 auto;
+    display: block;
+} #newnoteform .body-label {
+    margin-top: 3rem;
+} #newnoteform textarea {
+    margin: 0 auto;
+    display: block;
+    width: 50%;
+    border: 2px solid var(--bootstrap-text-color);
+    border-radius: 6px;
+    padding: 0.5rem 1rem;
+}  #newnoteform button {
+    margin: 2rem 0 0 25%;
+}
+
+#page-spacer {
+    height: 10rem;
+}
+
+/* Containers */
+.main-container {
+    background-color: #ffdb75;
+    min-height: 100vh;
+} .main-container a, .main-container h1 {
+    display: inline-block;
+} .main-container a {
+    margin-left: auto;
+}
+
+.notes-container {
+    margin-top: 2rem;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    background-color: #d8b861cc;
+    padding: 1.5rem 0;
+    flex-wrap: wrap;
+}
+
+.addnote-container {
+    background-color: #ffdb75;
+    min-height: 100vh;
+}
+
+/* note */
+.note {
+    background-color: #ffe395;
+    padding: 0.5rem 1rem;
+    width: 20%;
+    height: 33.33vh;
+    margin: 1.5%;
+    border-radius: 6px;
+    box-shadow: #a08948cc 5px 5px 7.5px;
+    transition: transform ease-in-out 0.2s;
+} .note:hover {
+    transform: translateY(-1.5rem);
+    cursor: pointer;
+}
