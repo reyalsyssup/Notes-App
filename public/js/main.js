@@ -4,8 +4,8 @@ setInterval(() => {
     var mainContainerBtnWidth = document.querySelector(".main-container .btn.add-new-note").getBoundingClientRect().width;
     var mainContainerH1Width = document.querySelector(".main-container h1").getBoundingClientRect().width;
     var mainContainerWidth = document.querySelector(".main-container").getBoundingClientRect().width;
-    // 48 is the 1.5rem on both sides
-    var mainContainerBtnMarginLeft = mainContainerWidth - mainContainerH1Width - mainContainerBtnWidth - 48;
+    // 35 accounts for padding
+    var mainContainerBtnMarginLeft = mainContainerWidth - mainContainerH1Width - mainContainerBtnWidth - 35;
 
     document.querySelector(".main-container .add-new-note").style.marginLeft = `${mainContainerBtnMarginLeft}px`;
 }, 200);
