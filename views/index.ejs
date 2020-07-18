@@ -2,19 +2,24 @@
 
 <div class="container-sm main-container">
     <h1>Notes Application</h1>
-    <a href="/addnote" class="btn btn-lg btn-success">Add new note</a>
-    <div class="notes-container">
-        <% notes.forEach(note => { %>
-            <div class="note">
-                <h1><%= note.title %></h1>
-                <p>
-                    <% if(note.body.length <= 70) { %> <%= note.body%> <% }
-                    else { %> <%= note.body.substring(0, 70)+"..." %> <% } %> 
-                </p>
-                <a href="/viewnote/<%= note._id %>" class="btn btn-md btn-primary">View\Edit</a>
-            </div>
-        <% }) %>
-    </div>
+    <a href="/addnote" class="btn btn-lg btn-success add-new-note">Add new note</a>
+    <% if(notes.length !== 0) { %>
+        <div class="notes-container">
+            <% notes.forEach(note => { %>
+                <div class="note">
+                    <h1><%= note.title %></h1>
+                    <p>
+                        <% if(note.body.length <= 70) { %> <%= note.body%> <% }
+                        else { %> <%= note.body.substring(0, 70)+"..." %> <% } %> 
+                    </p>
+                    <a href="/viewnote/<%= note._id %>" class="btn btn-sm btn-primary">View\Edit</a>
+                    <form action="/del/<%= note._id %>?_method=DELETE" method="POST" class="del-btn-form">
+                        <button class="btn btn-sm btn-danger">Delete Note</button>
+                    </form>
+                </div>
+            <% }) %>
+        </div>
+    <% } %>
 </div>
 
 <%- include("./partials/footer") %>

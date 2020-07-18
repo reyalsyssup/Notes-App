@@ -38,6 +38,15 @@ body {
     height: 10rem;
 }
 
+.del-btn-form {
+    display: inline-block;
+}
+.view-note-back {
+    margin: 0 auto;
+    display: block !important;
+    width: 5rem;
+}
+
 /* Containers */
 .main-container {
     background-color: #ffdb75;

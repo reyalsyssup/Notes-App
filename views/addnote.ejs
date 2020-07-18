@@ -1,12 +1,12 @@
 <%- include("./partials/header") %>
 
 <div class="container-sm addnote-container">
-    <h1>Add Note!</h1>
-    <a href="/" class="btn btn-lg btn-primary">Go Back</a>
+    <h1 style="text-align: center;">Add Note!</h1>
     <div class="container addnote-inner-container">
         <form action="/addnote" method="POST" id="noteform">
+            <a href="/" class="btn btn-lg btn-primary">Go Back</a>
             <label for="title" class="title-label">Title:</label>
-            <input type="text" id="title" name="newnote[title]" placeholder="Do Homework!">
+            <input type="text" id="title" name="newnote[title]" placeholder="Do Homework!" required>
             <label for="body" class="body-label">Body:</label>
             <textarea name="newnote[body]" id="body" cols="45" rows="10" placeholder="Do maths, science..."></textarea>
             <button class="btn btn-lg btn-success">Submit</button>
