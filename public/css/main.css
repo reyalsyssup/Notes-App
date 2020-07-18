@@ -8,29 +8,29 @@ body {
     padding: 0;
 }
 
-#newnoteform {
+#noteform {
     width: 100%;
-} #newnoteform label {
+} #noteform label {
     font-size: 2rem;
     display: block;
     margin-left: 25%;
-} #newnoteform input[type="text"] {
+} #noteform input[type="text"] {
     border: 2px solid var(--bootstrap-text-color);
     border-radius: 6px;
     padding: 0.5rem 1rem;
     width: 50%;
     margin: 0 auto;
     display: block;
-} #newnoteform .body-label {
+} #noteform .body-label {
     margin-top: 3rem;
-} #newnoteform textarea {
+} #noteform textarea {
     margin: 0 auto;
     display: block;
     width: 50%;
     border: 2px solid var(--bootstrap-text-color);
     border-radius: 6px;
     padding: 0.5rem 1rem;
-}  #newnoteform button {
+}  #noteform button {
     margin: 2rem 0 0 25%;
 }
 
@@ -63,6 +63,11 @@ body {
     min-height: 100vh;
 }
 
+.viewnote-container h1 {
+    text-align: center;
+    display: block;
+}
+
 /* note */
 .note {
     background-color: #ffe395;
@@ -74,6 +79,6 @@ body {
     box-shadow: #a08948cc 5px 5px 7.5px;
     transition: transform ease-in-out 0.2s;
 } .note:hover {
-    transform: translateY(-1.5rem);
+    transform: translateY(-1.25rem);
     cursor: pointer;
 }

@@ -4,6 +4,7 @@ setInterval(() => {
     var mainContainerBtnWidth = document.querySelector(".main-container a").getBoundingClientRect().width;
     var mainContainerH1Width = document.querySelector(".main-container h1").getBoundingClientRect().width;
     var mainContainerWidth = document.querySelector(".main-container").getBoundingClientRect().width;
+    // 48 is the 1.5rem on both sides
     var mainContainerBtnMarginLeft = mainContainerWidth - mainContainerH1Width - mainContainerBtnWidth - 48;
 
     document.querySelector(".main-container a").style.marginLeft = `${mainContainerBtnMarginLeft}px`;

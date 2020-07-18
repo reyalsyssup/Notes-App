@@ -1,0 +1,15 @@
+<%- include("partials/header") %>
+
+<div class="container-sm main-container viewnote-container">
+    <h1>View/Edit Note</h1>
+
+    <form action="/updatenote/<%= note._id %>" method="POST" id="noteform">
+        <label for="title" class="title-label">Title:</label>
+        <input type="text" id="title" name="updatenote[title]" placeholder="This appears to be empty, add something!" value="<%= note.title %>">
+        <label for="body" class="body-label">Body:</label>
+        <textarea name="updatenote[body]" id="body" cols="45" rows="10" placeholder="This appears to be empty, add something!"><%= note.body %></textarea>
+        <button class="btn btn-lg btn-success">Update Note</button>
+    </form>
+</div>
+
+<%- include("partials/footer") %>
